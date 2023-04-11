@@ -11,7 +11,7 @@ import random
 import requests
 
 # 使用脚本需要修改的部分 ⬇️
-token = "AgHxIJe86z671Oo8eqr7hKRovWbMWZiCIFs1XL"
+token = "AgHxIJe86z671Oo8eqr7hKRovWbMWZiCIFs1XL-cb2NYDWRyv4I8bL0or1mAyrwpfY8cQB4vgoDytgAAAADEFwAACv6d2z8poy826HrPLbz_D8lkMpWNaC4_newGK8ZCDBnwfDmJsugOetFygf8tFNxt"
 
 TG_BOT_TOKEN = '' # 通过 @BotFather 申请获得，示例：1077xxx4424:AAFjv0FcqxxxxxxgEMGfi22B4yh15R5uw
 TG_USER_ID = ''  # 用户、群组或频道 ID，示例：129xxx206
