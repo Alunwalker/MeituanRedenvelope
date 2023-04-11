@@ -155,7 +155,7 @@ class MeiTuan:
         """
         self.log("**开始执行签到领豆函数:** \n")
 
-        datas = "token=" + self.token
+        datas = "token2=" + self.token
         url_signforbeans = r"/cfeplay/playcenter/batchgrabred/drawPoints/v2"
 
         result2 = self.request(url_signforbeans, datas)
@@ -190,7 +190,7 @@ class MeiTuan:
 
             datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
                 wm_latitude) + "&wm_longitude=" + str(
-                    wm_longitude) + "&token=" + str(
+                    wm_longitude) + "&token2=" + str(
                         token) + "&wm_ctype=" + self.wm_ctype
             url_myredbeanRecords = r"/cfeplay/playcenter/batchgrabred/corepage"
             result2 = self.request(url_myredbeanRecords, datas)
@@ -249,7 +249,7 @@ class MeiTuan:
         self.log("**开始执行获取batchId脚本:**\n")
         datas = "parActivityId=" + self.parActivityId + "&wm_ctype=" + self.wm_ctype + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
-                self.wm_longitude) + "&token=" + self.token
+                self.wm_longitude) + "&token2=" + self.token
 
         url_getbatchId = r"/cfeplay/playcenter/batchgrabred/corepage"
         result2 = self.request(url_getbatchId, datas)
@@ -279,7 +279,7 @@ class MeiTuan:
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
                 self.wm_longitude
-            ) + "&token=" + self.token + "&action=SiginInGetProp"
+            ) + "&token2=" + self.token + "&action=SiginInGetProp"
         url_doaction = r"/cfeplay/playcenter/batchgrabred/doAction"
         result2 = self.request(url_doaction, datas)
         if (result2["code"] == 0 and result2["data"]["signDays"] != 0):
@@ -300,7 +300,7 @@ class MeiTuan:
         self.log("**开始执行查询豆子变化详情参数脚本**:\n")
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
-                self.wm_longitude) + "&token=" + str(
+                self.wm_longitude) + "&token2=" + str(
                     self.token) + "&userPortraitId=" + str(
                         self.portraitId) + "&pageNum=1"
         url_myredbeanRecords = r"/cfeplay/playcenter/batchgrabred/myRedBeanRecords"
@@ -338,7 +338,7 @@ class MeiTuan:
                 self.exchangeCoinNumber
             ) + "&parActivityId=" + self.parActivityId + "&wm_ctype=" + self.wm_ctype + "&wm_latitude=" + str(
                 self.wm_latitude) + "&wm_longitude=" + str(
-                    self.wm_longitude) + "&token=" + self.token
+                    self.wm_longitude) + "&token2=" + self.token
             url_exchange = r"/cfeplay/playcenter/batchgrabred/exchange"
             result2 = self.request(url_exchange, datas)
             if (result2["code"] == 0 and result2["subcode"] == 0):
@@ -375,7 +375,7 @@ class MeiTuan:
         self.log("**开始执行查询道具库中必中符🧧详情的脚本:**\n")
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
-                self.wm_longitude) + "&token=" + self.token
+                self.wm_longitude) + "&token2=" + self.token
         url_querymyprops = r"/cfeplay/playcenter/batchgrabred/myProps"
         result2 = self.request(url_querymyprops, datas)
         if (result2["code"] == 0 and len(result2["data"])):
@@ -533,7 +533,7 @@ class MeiTuan:
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
                 self.wm_longitude
-            ) + "&token=" + self.token + "&portraitId=" + str(self.portraitId)
+            ) + "&token2=" + self.token + "&portraitId=" + str(self.portraitId)
         url_sendTaskRedBean = r"/cfeplay/playcenter/batchgrabred/sendTaskRedBean"
         result2 = self.request(url_sendTaskRedBean, datas)
         if (result2["status"] == 0):
@@ -558,7 +558,7 @@ class MeiTuan:
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
                 self.wm_longitude
-            ) + "&token=" + self.token + "&batchId=" + self.batchId
+            ) + "&token2=" + self.token + "&batchId=" + self.batchId
         url_acceptRed = r"/cfeplay/playcenter/batchgrabred/acceptRed"
         result2 = self.request(url_acceptRed, datas)
         if (result2["code"] == 0):
@@ -577,7 +577,7 @@ class MeiTuan:
         datas = "parActivityId=" + self.parActivityId + "&wm_latitude=" + str(
             self.wm_latitude) + "&wm_longitude=" + str(
                 self.wm_longitude
-            ) + "&token=" + self.token + "&batchId=" + self.batchId
+            ) + "&token2=" + self.token + "&batchId=" + self.batchId
         url_drawlottery = r"/cfeplay/playcenter/batchgrabred/redToBean"
         result2 = self.request(url_drawlottery, datas)
         if (result2["code"] == 0):
@@ -596,7 +596,7 @@ class MeiTuan:
             self.wm_latitude
         ) + "&wm_longitude=" + str(
             self.wm_longitude
-        ) + "&token=" + self.token + "&batchId=" + self.batchId + "&isShareLink=true" + "&propType=1" + "&propId=" + str(
+        ) + "&token2=" + self.token + "&batchId=" + self.batchId + "&isShareLink=true" + "&propType=1" + "&propId=" + str(
             self.propIdforuse)
         url_drawlottery = r"/cfeplay/playcenter/batchgrabred/drawlottery"
         result2 = self.request(url_drawlottery, datas)
@@ -628,7 +628,7 @@ class MeiTuan:
     def querymyreward(self):
         """查询已领取到的天天神券
         """
-        datas = "parActivityId=" + self.parActivityId + "&token=" + self.token
+        datas = "parActivityId=" + self.parActivityId + "&token2=" + self.token
         url_querymyreward = r"/cfeplay/playcenter/batchgrabred/myreward"
         result2 = self.request(url_querymyreward, datas)
         if (result2["code"] == 0 and len(result2["data"]["myawardInfos"])):
